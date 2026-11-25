@@ -22,6 +22,8 @@ RANT = (
 
 def main() -> None:
     os.makedirs("/output", exist_ok=True)
+    # Write the rant verbatim: no trailing newline, so the file
+    # contains exactly RANT and nothing else.
     with open("/output/entry.txt", "w", encoding="utf-8", newline="") as f:
         f.write(RANT)
 
